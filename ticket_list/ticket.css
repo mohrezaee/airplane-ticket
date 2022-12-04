@@ -1,213 +1,197 @@
-body{
-	padding: 0px;
-	margin: 0px;
-	width: 100%;
-	height: fit-content;
-	background-color: #ec94a131; 	
-	
-}
-
-.topHeader{
-	width: 100%;
-	height: 80px;
-	display: flex;
-	background-color: #ffffff;
-	margin-bottom: 5%;
-}
-
-.ticketList{
-	overflow:hidden;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #ec94a131;
 
 }
 
-.ticketContainer{
-	margin: auto;
-	margin-top: 1.5%;
+.topHeader {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 5%;
+}
+
+.ticketList {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticketContainer {
+	margin: 1.5% auto auto;
 	width: 1500px;
-	height: 300px;
-	background-color: #ffffff;
+    height: 300px;
+    background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0px 10px 20px #d9165033;
-    
+    box-shadow: 0 10px 20px #d9165033;
 }
 
-.priceContainer{
-	margin-top: 50px;
-	margin-left: 30px;
-	width: 300px;
-	height: 200px;
-	background-color: #ffffff;
-	border: #290d1662;
-    border-radius: 20px;
-	border-width: 1.5px;
-	border-style: solid;
-    align-items: center;
-	text-decoration: none;
-	float: left;
-	padding-right: 20px;
-}
-
-.priceContainer:hover{
-	background:#ca658362;
-}
-
-.Cart-Items{
-	height: 100%;
-	overflow: hidden; 
-}
-
-.price{
-	margin-top: 50px;
-	margin-right: 35px;
-	margin-left: 35px;
-	line-height: 10px;
-	font-size: 30px;
-	font-family: 'Yekan';
-	font-weight: 600;
-	color: #575757;
-}
-
-.times{
-	margin-top: 100px;
-	margin-right: 50px;
-	margin-left: 20px;
-	height: 100px;
-	float:right;
-}
-
-.times2{
-	margin-top: 100px;
-
-	height: 100px;
-	float:right;
-}
-.title{
-	padding-top: 10px;
-	line-height: 10px;
-	font-size: 32px;
-	font-family: 'Yekan';
-	font-weight: 800;
-	color: #202020;
-}
-.subtitle{
-	line-height: 10px;
-	font-size: 40px;
-	font-family: 'Yekan';
-	font-weight: 600;
-	color: #575757;
-}
-
-.cityTitle{
-	line-height: 10px;
-	font-size: 25px;
-	text-align: center;
-	font-family: 'Yekan';
-	font-weight: 600;
-	color: #575757;
-}
-
-.dateTitle{
-	line-height: 10px;
-	font-size: 15px;
-	text-align: center;
-	font-family: 'Yekan';
-	font-weight: 400;
-	color: #575757;
-}
-
-.image-box{
-	margin-top: 60px;
-	margin-left: 30px;
-	font-size: 15px;
-	color: #575757;
-	font-family: 'Yekan';
+.priceContainer {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+	border-radius: 20px;
+	border: 2px solid #290d1662;
 	align-items: center;
-	text-align: center;
-	float:right;
+    text-decoration: none;
+    float: left;
+    padding-right: 20px;
 }
 
-.headerLogin{
-	text-decoration: none;
-	margin-top: 35px;
-	margin-right: 15px;
-	float: right;
-	line-height: 10px;
-	font-size: 25px;
-	font-family: 'Yekan';
-	font-weight: 600;
-	color: #575757;
+.priceContainer:hover {
+    background: #ca658362;
 }
 
-.Heading{
-	margin: 0 auto;
-	margin-top: 15px;
-    position: relative;
-	width: 800px;
-	height: 50px;
-	background-color: #ffffff;
-	border: #290d1662;
-    border-radius: 20px;
-	border-width: 1px;
-	border-style: solid;
+.Cart-Items {
+    height: 100%;
+    overflow: hidden;
+}
+
+.price {
+    margin-top: 50px;
+    margin-right: 35px;
+    margin-left: 35px;
+    line-height: 10px;
+    font-size: 30px;
+    font-family: 'Yekan';
+    font-weight: 600;
+    color: #575757;
+}
+
+.times {
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 20px;
+    height: 100px;
+    float: right;
+}
+
+.times2 {
+    margin-top: 100px;
+
+    height: 100px;
+    float: right;
+}
+
+.title {
+    padding-top: 10px;
+    line-height: 10px;
+    font-size: 32px;
+    font-family: 'Yekan';
+    font-weight: 800;
+    color: #202020;
+}
+
+.subtitle {
+    line-height: 10px;
+    font-size: 40px;
+    font-family: 'Yekan';
+    font-weight: 600;
+    color: #575757;
+}
+
+.cityTitle {
+    line-height: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Yekan';
+    font-weight: 600;
+    color: #575757;
+}
+
+.dateTitle {
+    line-height: 10px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Yekan';
+    font-weight: 400;
+    color: #575757;
+}
+
+.image-box {
+    margin-top: 60px;
+    margin-left: 30px;
+    font-size: 15px;
+    color: #575757;
+    font-family: 'Yekan';
     align-items: center;
-	text-decoration: none;
-	
+    text-align: center;
+    float: right;
 }
 
+.headerLogin {
+    text-decoration: none;
+    margin-top: 35px;
+    margin-right: 15px;
+    float: right;
+    line-height: 10px;
+    font-size: 25px;
+    font-family: 'Yekan';
+    font-weight: 600;
+    color: #575757;
+}
 
-.headerLogo{
-	font-size: 15px;
+.Heading {
+	margin: 15px auto 0;
+	position: relative;
+    width: 800px;
+    height: 50px;
+    background-color: #ffffff;
+	border-radius: 20px;
+	border: 1px solid #290d1662;
+	align-items: center;
+    text-decoration: none;
+
+}
+
+.headerLogo {
 	text-decoration: none;
-	margin-top: 25px;
-	margin-left: 10px;
-	float: left;
-	line-height: 10px;
-	font-size: 25px;
-	font-family: 'Yekan';
-	font-weight: 600;
-	color: #575757;
+    margin-top: 25px;
+    margin-left: 10px;
+    float: left;
+    line-height: 10px;
+    font-size: 25px;
+    font-family: 'Yekan';
+    font-weight: 600;
+    color: #575757;
 }
 
 .subHeading {
-	height: 50px;
-	float: left;
-	width: 150px;
-	margin-top: 10px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 18px;
+    height: 50px;
+    float: left;
+    width: 150px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.subHeadingImage{
-	margin-top: 10px;
-	width: 40px;
-	align-items: center;
-	text-align: center;
-	float:left;
-}
- 
-
-
-.footer{
-	width: 100%;
-	height: 80px;
-	margin-top:100px;
-	background-color: #ffffff;
-	
-
-	text-align: center;
-
-    
+.subHeadingImage {
+    margin-top: 10px;
+    width: 40px;
+    align-items: center;
+    text-align: center;
+    float: left;
 }
 
-.text-footer{
-	margin: 0 auto;
-	margin-top: 30px;
+.footer {
+    width: 100%;
+    height: 80px;
+    margin-top: 100px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.text-footer {
+	margin: 30px auto 0;
 	position: relative;
-	font-size: 24px;
+    font-size: 24px;
 }
