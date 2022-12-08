@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta charset="UTF-8">
+
+<head>
+    <title>شرکت هواپیمایی مهسا</title>
+    <link href="../index.css" rel="stylesheet" />
+    <link href="home.css" rel="stylesheet" />
+    <link rel="icon" href="../favicon.svg">
+    <script src="js/jquery.js"></script>
+    <script src="js/persian.date.js"></script>
+    <script src="js/persian.datepicker.js"></script>
+</head>
+
+<body dir="rtl" id="root">
+    <nav class="home-navbar">
+        <button class="login-button" onclick="login()">
+            ورود / ثبت نام
+        </button>
+        <a href="#" class="headerLogo" style="overflow:hidden;">
+            <h1 style="margin:0px;">هواپیمایی مهسا</h1>
+            <img src="../imgs/logo.png" height="35px" />
+        </a>
+    </nav>
+    <div class="home-container">
+
+    </div>
+    <div class="search-ticket-container">
+        <h2 class="card-title">جستجوی بلیط</h2>
+        <div class="row">
+            <div class="city-autocomplete">
+                <input class="left-city-input" id="source-city-input" placeholder="انتخاب مبدا">
+            </div>
+            <img src="../imgs/switch.png" width="30px" height="30px" class="switch-cities" />
+            <div class="city-autocomplete">
+                <input class="middle-city-input" id="destination-city-input" placeholder="انتخاب مقصد" />
+            </div>
+            <input type="date" class="date-input" />
+            <input type="date" class="date-input" />
+            <input type="number" placeholder="تعداد مسافر" id="passenger-number-input" />
+        </div>
+
+        <button class="login-button" onclick="searchTicket()">
+            جستجو
+        </button>
+
+    </div>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

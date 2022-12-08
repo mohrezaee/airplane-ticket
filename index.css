@@ -5,10 +5,10 @@ body {
     background-color: rgb(245, 245, 245);
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 * {
+    box-sizing: border-box;
     font-family: 'Yekan';
     outline: none;
 }
@@ -24,6 +24,7 @@ body {
     border-bottom: 3px solid rgb(255, 67, 67);
     text-align: center;
     padding-bottom: 8px;
+    margin: 0.5rem 0px;
 }
 
 .center-container {
@@ -82,6 +83,20 @@ body {
 .login-button:hover {
     background-color: #bf3449;
 }
+.white-button {
+    background-color: white;
+    border-radius: 4px;
+    font-size: 24px;
+    padding: 8px 16px;
+    transition-duration: 200ms;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.white-button:hover {
+    background-color: #c9c9c9;
+}
 
 .field-title {
     font-size: 18px;
@@ -93,6 +108,16 @@ body {
     border-top: 2px solid rgb(255, 67, 67);
     border-radius: 5px;
     width: 100%;
+}
+
+.home-navbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background-color: white;
 }
 
 @font-face {
