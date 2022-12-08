@@ -1,7 +1,8 @@
 html,
-body {
+body, #root {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     background-color: rgb(245, 245, 245);
     padding: 0;
     margin: 0;
@@ -11,6 +12,9 @@ body {
     box-sizing: border-box;
     font-family: 'Yekan';
     outline: none;
+}
+p {
+    margin: 0px;
 }
 
 .login-card {
@@ -118,6 +122,8 @@ body {
     display: flex;
     align-items: center;
     background-color: white;
+    border-bottom: #636060 solid 2px;
+    z-index: 1000;
 }
 
 @font-face {
