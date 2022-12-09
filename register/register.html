@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شرکت هواپیمایی مهسا</title>
     <link href="../index.css" rel="stylesheet" />
     <link href="register.css" rel="stylesheet" />
@@ -11,6 +12,32 @@
 </head>
 
 <body dir="rtl" id="root">
+    <nav class="home-navbar">
+        <img id="navbar-menu" class="navbar-menu" src="../imgs/menu.png" width="30px" height="30px"
+            onclick="openNav()" />
+        <div id="navbar-side-menu" class="side-navbar">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <button id="main-menu-button" class="navbar-button">
+                صفحه اصلی
+            </button>
+            <button id="navbar-login-button" class="navbar-button" onclick="login()">
+                ورود / ثبت نام
+            </button>
+            <button id="navbar-profile" class="navbar-button">
+                پروفایل
+            </button>
+            <button id="navbar-aboutus" class="navbar-button">
+                درباره ما
+            </button>
+            <button id="navbar-logout" class="navbar-button" onclick="logout()">
+                خروج
+            </button>
+        </div>
+        <a href="#" class="headerLogo">
+            <p class="header-logo-title">هواپیمایی مهسا</p>
+            <img src="../imgs/logo.png" height="35px" />
+        </a>
+    </nav>
     <div class="center-container">
         <div class="login-card">
             <div class="login-form">
@@ -54,13 +81,14 @@
                         ایجاد حساب
                     </button>
                 </form>
-                <a href="../login/login.html" style="color: gray;">
+                <a href="../login/login" style="color: gray;">
                     حساب کاربری دارید؟
                 </a>
             </div>
         </div>
     </div>
     <script src="register.js"></script>
+    <script src="../global.js"></script>
 </body>
 
 </html>

@@ -144,21 +144,8 @@ passengerNumberInput.addEventListener("input", function (e) {
 })
 
 function searchTicket() {
-	console.log('hiiiiii')
-	// window.location.href = 'ticket_list/ticket.html'
-}
-function login() {
-	window.location.href = '../login/login.html'
+	window.location.href = '../ticket_list/ticket.html'
 }
 
-const user = localStorage.getItem("user")
-console.log(user)
-const navbarLoginButton = document.getElementById('navbar-login-button')
-const navbarProfile = document.getElementById('navbar-profile')
-if(user) {
-	navbarLoginButton.style.display = 'none'
-	navbarProfile.style.display = 'block'
-} else {
-	navbarLoginButton.style.display = 'block'
-	navbarProfile.style.display = 'none'
-}
+
+

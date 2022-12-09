@@ -27,9 +27,10 @@ function register(e) {
         return
     }
     users.push(newUser)
+    console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
     localStorage.setItem("users", JSON.stringify(users))
-    localStorage.setItem("user", newUser)
-    window.location.href = "../home/home.html"
+    localStorage.setItem("user", JSON.stringify(newUser))
+    window.location.href = "../home/home"
 }
 
 function existEmail(email) {

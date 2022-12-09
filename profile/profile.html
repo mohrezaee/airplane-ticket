@@ -8,23 +8,39 @@
     <link href="../index.css" rel="stylesheet" />
     <link href="profile.css" rel="stylesheet" />
     <link rel="icon" href="../favicon.svg">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body dir="rtl" id="root">
-    <nav class="profile-navbar">
- 
-        <h1 class="page-title">پنل کاربری</h1>
-        <a href="#" class="nav-title">خروج</a>
-        <a href="#" class="nav-title">صفحه اصلی</a>
-        <a href="#" class="headerLogo" style="overflow:hidden;">
-            <h1 style="margin:0px;">هواپیمایی مهسا</h1>
+    <nav class="home-navbar">
+        <img id="navbar-menu" class="navbar-menu" src="../imgs/menu.png" width="30px" height="30px"
+            onclick="openNav()" />
+        <div id="navbar-side-menu" class="side-navbar">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <button id="main-menu-button" class="navbar-button">
+                صفحه اصلی
+            </button>
+            <button id="navbar-login-button" class="navbar-button" onclick="login()">
+                ورود / ثبت نام
+            </button>
+            <button id="navbar-profile" class="navbar-button">
+                پروفایل
+            </button>
+            <button id="navbar-aboutus" class="navbar-button">
+                درباره ما
+            </button>
+            <button id="navbar-logout" class="navbar-button" onclick="logout()">
+                خروج
+            </button>
+        </div>
+        <a href="#" class="headerLogo">
+            <p class="header-logo-title">هواپیمایی مهسا</p>
             <img src="../imgs/logo.png" height="35px" />
         </a>
     </nav>
     <h2 class="title">لیست بلیط های خریداری شده</h2>
     <div class="ticket-container">
-        
+
         <div class="row">
             <a class="price">
                 <h1 class="text" style="text-align:center; margin-top:50px; font-size:14pt;">
@@ -50,12 +66,12 @@
         </div>
 
         <h2 class="extra-info-ticket">
-         اسامی مسافرین: محمد رضایی- امین احمدزاده - ارسلان مسعودی فرد
+            اسامی مسافرین: محمد رضایی- امین احمدزاده - ارسلان مسعودی فرد
         </h2>
     </div>
 
     <div class="ticket-container">
-        
+
         <div class="row">
             <a class="price">
                 <h1 class="text" style="text-align:center; margin-top:50px; font-size:14pt;">
@@ -81,14 +97,14 @@
         </div>
 
         <h2 class="extra-info-ticket">
-         اسامی مسافرین: محمد رضایی- امین احمدزاده - ارسلان مسعودی فرد
+            اسامی مسافرین: محمد رضایی- امین احمدزاده - ارسلان مسعودی فرد
         </h2>
     </div>
     <div class="space">
 
     </div>
 
-    
+    <script src="../global.js"></script>
 </body>
 
 </html>
