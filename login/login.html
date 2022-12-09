@@ -13,22 +13,29 @@
 <body dir="rtl" id="root">
     <div class="center-container">
         <div class="login-card">
-            <div class="login-form">
+            <form onsubmit="console.log('hi')">
 
-                <h2 class="card-title">ورود به حساب کاربری</h2>
-                <input class="text-input" type="email" placeholder="ایمیل خود را وارد کنید" />
-                <input class="text-input" type="password" placeholder="رمز عبور خود را وارد کنید" />
-                <br />
-                <button class="login-button" onclick="login()">
-                    ورود
-                </button>
-                <a href="../register/register.html" style="color: gray;">
-                    حساب کاربری ندارید؟
-                    <span style="font-weight: 700;">
-                        ثبت نام کنید
-                    </span>
-                </a>
-            </div>
+                <div class="login-form" >
+
+                    <h2 class="card-title">ورود به حساب کاربری</h2>
+                    <p class="field-title">ایمیل</p>
+                    <input class="text-input" id="login-email" type="email" required
+                        placeholder="ایمیل خود را وارد کنید" />
+                    <p class="field-title">رمز عبور</p>
+                    <input class="text-input" id="login-password" type="password" required
+                        placeholder="رمز عبور خود را وارد کنید" />
+                    <br />
+                    <button class="login-button" type="submit">
+                        ورود
+                    </button>
+                    <a href="../register/register.html" style="color: gray;">
+                        حساب کاربری ندارید؟
+                        <span style="font-weight: 700;">
+                            ثبت نام کنید
+                        </span>
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
     <script src="login.js">
