@@ -4,109 +4,125 @@
 <meta charset="UTF-8">
 
 <head>
-	<title>شرکت هواپیمایی مهسا</title>
-	<link href="../index.css" rel="stylesheet" />
-	<link rel="icon" href="../favicon.svg">
-	<link rel="stylesheet" type="text/css" href="./ticket.css">
+    <title>شرکت هواپیمایی مهسا</title>
+    <link href="../index.css" rel="stylesheet" />
+    <link href="ticket.css" rel="stylesheet" />
+    <link rel="icon" href="../favicon.svg">
+
 </head>
 
-<body dir="rtl" id="root" >
-	<nav class="home-navbar">
-		<button class="login-button" onclick="login()">
-			ورود / ثبت نام
-		</button>
-		<div class="Heading">
-			<div class="subHeading" style="width:85px; text-align: right; margin-right:10px;">
+<body dir="rtl" id="root">
+    <nav class="profile-navbar">
+        <button class="login-button" onclick="login()">
+            ورود / ثبت نام
+        </button>
+		
+        <a href="#" class="headerLogo" style="overflow:hidden;">
+            <h1 style="margin:0px;">هواپیمایی مهسا</h1>
+            <img src="../imgs/logo.png" height="35px" />
+        </a>
+    </nav>
+
+    <div class="heading">  
+        <div class="header-row ">
+            <div class="subHeading" style="text-align: right;" >
 				همدان
 			</div>
-			<div class="subHeadingImage">
-				<img src="../imgs/arrow.png" style="float: left; height: 25px" />
+			<div class="subHeading">
+				<img src="../imgs/arrow.png" style="height:25px" />
 			</div>
-			<div class="subHeading" style="width:85px; text-align: left; margin-left: 5px;">
+			<div class="subHeading" style="text-align: left;" >
 				 زاهدان
 			</div>
-			<div class="subHeadingImage">
-				<img src="../imgs/line.png" style="float: left; height: 35px" />
+            <div class="subHeadingLine">
+				<img src="../imgs/line.png" style=" height: 35px" />
 			</div>
-			<div class="subHeading" style="text-align: left;">
-				شنبه 3 آبان
-				<img src="../imgs/calendar.png" style="float: left; height: 40px; margin-left:15px; margin-top: 0px;" />
+			<div class="subHeadingLine" style=" margin-top: 30px;">
+				<img src="../imgs/calendar.png" style="height: 30px;" />
 			</div>
-			<div class="subHeadingImage">
-				<img src="../imgs/line.png" style="float: left; height: 35px" />
+			<div class="subHeading" style="text-align: center;" >
+				1401/2/2
+			</div>
+			
+			<div class="subHeadingLine">
+				<img src="../imgs/line.png" style="height: 35px" />
+			</div>
+			<div class="subHeadingLine" style=" margin-top: 20px">
+				<img src="../imgs/passenger.png" style="height: 25px;" />
 			</div>
 			<div class="subHeading">
 				3 مسافر
-				<img src="../imgs/passenger.png" style="float: left; height: 35px; margin-left:15px;" />
 			</div>
-			<div class="subHeadingImage">
-				<img src="../imgs/line.png" style="float: left; height: 35px" />
+			<div class="subHeadingLine">
+				<img src="../imgs/line.png" style="height: 35px" />
 			</div>
-			<a href="http://example.com" class="subHeading">
-				ویرایش بلیط
+			<a href="http://example.com" class="subHeading" style="text-align: left;">
+				ویرایش 
 			</a>
-		</div>
-			
-			<a href="#" class="headerLogo" style="overflow:hidden;">
-				<h1 style="margin:0px;">هواپیمایی مهسا</h1>
-				<img src="../imgs/logo.png" height="35px" />
-			</a>
-	</nav>
+        </div>
+    </div>
 
-	
-		<div class="ticketContainer">
-			<div class="Cart-Items">
-				<div class="times">
-					<h3 class="subtitle">16:30</h3>
-					<!-- <h3 class="dateTitle">شنبه 3 آبان</h3> --> <!-- TO MANY DATES!!-->
-					<h3 class="cityTitle">همدان</h3>
-				</div>
-				<div class="image-box">
-					<h3>مدت حرکت: 4 ساعت</h3>
-					<img src="../imgs/airplane.png" style="height: 35px" />
-				</div>
-				<div class="times2">
-					<h3 class="subtitle">20:30</h3>
-					<!-- <h3 class="dateTitle">شنبه 3 آبان</h3> --> <!-- TO MANY DATES!!-->
-					<h3 class="cityTitle">زاهدان</h3>
-				</div>
-				<a href="http://example.com" class="priceContainer">
-					<h1 class="title">اکونومی</h1>
-					<h3 class="price">1.500.000 تومان</h3>
-				</a>
-				<a href="http://example.com" class="priceContainer">
-					<h1 class="title">بیزینس</h1>
-					<h3 class="price">10.0.000 تومان</h3>
-				</a>
-			</div>
-		</div>
-		<div class="ticketContainer">
-			<div class="Cart-Items">
-				<div class="times">
-					<h3 class="subtitle">08:30</h3>
-					<!-- <h3 class="dateTitle">شنبه 3 آبان</h3> --> <!-- TO MANY DATES!!-->
-					<h3 class="cityTitle">همدان</h3>
-				</div>
-				<div class="image-box">
-					<h3>مدت حرکت: 2 ساعت</h3>
-					<img src="../imgs/airplane.png" style="height: 35px" />
-				</div>
-				<div class="times2">
-					<h3 class="subtitle">10:30</h3>
-					<!-- <h3 class="dateTitle">شنبه 3 آبان</h3> --> <!-- TO MANY DATES!!-->
-					<h3 class="cityTitle">زاهدان</h3>
-				</div>
-				<a href="http://example.com" class="priceContainer">
-					<h1 class="title">اکونومی</h1>
-					<h3 class="price">2.504.000 تومان</h3>
-				</a>
-				<a href="http://example.com" class="priceContainer">
-					<h1 class="title">بیزینس</h1>
-					<h3 class="price">24.004.040 تومان</h3>
-				</a>
-			</div>
-		</div>
-   
-	
+    <h2 class="title">لیست بلیط های یافت شده</h2>
+    <div class="ticket-container">  
+        <div class="row">
+            <a href="#" class="price">
+                <h1 class="text" style="text-align:center; margin-top:50px;">
+                    اکونومی<br> 1.500.000 تومان
+                </h1>
+            </a>
+            <a href="#" class="price">
+                <h1 class="text" style="text-align:center; margin-top:50px;">
+                    بیزینس<br> 2.500.000 تومان
+                </h1>
+            </a>
+            <div class="time1">
+                <h3 class="time-text1">20:30</h3>
+                <h3 class="time-text1">زاهدان</h3>
+            </div>
+            <div class="image-box">
+                <h3>مدت حرکت: 4 ساعت</h3>
+                <img src="../imgs/airplane.png" style=" max-width:100%;" />
+            </div>
+            <div class="time1">
+                <h3 class="time-text2">16:30</h3>
+                <h3 class="time-text2">همدان</h3>
+            </div>
+        </div>
+    </div>
+
+	<div class="ticket-container">  
+        <div class="row">
+            <a href="#" class="price">
+                <h1 class="text" style="text-align:center; margin-top:50px;">
+                    اکونومی<br> 1.500.000 تومان
+                </h1>
+            </a>
+            <a href="#" class="price">
+                <h1 class="text" style="text-align:center; margin-top:50px;">
+                    بیزینس<br> 2.500.000 تومان
+                </h1>
+            </a>
+            <div class="time1">
+                <h3 class="time-text1">20:30</h3>
+                <h3 class="time-text1">زاهدان</h3>
+            </div>
+            <div class="image-box">
+                <h3>مدت حرکت: 4 ساعت</h3>
+                <img src="../imgs/airplane.png" style=" max-width:100%;" />
+            </div>
+            <div class="time1">
+                <h3 class="time-text2">16:30</h3>
+                <h3 class="time-text2">همدان</h3>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="space">
+
+    </div>
+
+    
 </body>
+
 </html>
