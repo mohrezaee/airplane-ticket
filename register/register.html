@@ -15,42 +15,52 @@
         <div class="login-card">
             <div class="login-form">
                 <h2 class="card-title">ایجاد حساب کاربری</h2>
-                <div class="register-grid">
-                    <div>
-                        <p class="field-title">نام</p>
-                        <input class="text-input" type="text" placeholder="نام خود را وارد کنید" />
+                <form onsubmit="register(event)">
+
+                    <div class="register-grid">
+                        <div>
+                            <p class="field-title">نام</p>
+                            <input required class="text-input" id="register-firstname" type="text"
+                                placeholder="نام خود را وارد کنید" />
+                        </div>
+                        <div>
+                            <p class="field-title">نام خانوادگی</p>
+                            <input required class="text-input" id="register-lastname" type="text"
+                                placeholder="نام خانوادگی خود را وارد کنید" />
+                        </div>
+                        <div>
+                            <p class="field-title">شماره پاسپورت</p>
+                            <input required class="text-input" id="register-passnumber" type="tel"
+                                placeholder=" شماره پاسپورت خود را وارد کنید" />
+                        </div>
+                        <div>
+                            <p class="field-title">ایمیل</p>
+                            <input required class="text-input" type="email" id="register-email"
+                                placeholder="ایمیل خود را وارد کنید" />
+                        </div>
+                        <div>
+                            <p class="field-title">رمز عبور</p>
+                            <input required class="text-input" type="password" id="register-password"
+                                placeholder="رمز عبور خود را وارد کنید" />
+                        </div>
+                        <div>
+                            <p class="field-title">تکرار رمز عبور </p>
+                            <input required class="text-input" type="password" id="register-password-confirm"
+                                placeholder="رمز عبور خود را تکرار کنید" />
+                        </div>
+                        <br />
                     </div>
-                    <div>
-                        <p class="field-title">نام خانوادگی</p>
-                        <input class="text-input" type="text" placeholder="نام خانوادگی خود را وارد کنید" />
-                    </div>
-                    <div>
-                        <p class="field-title">شماره پاسپورت</p>
-                        <input class="text-input" type="tel" placeholder=" شماره پاسپورت خود را وارد کنید" />
-                    </div>
-                    <div>
-                        <p class="field-title">ایمیل</p>
-                        <input class="text-input" type="email" placeholder="ایمیل خود را وارد کنید" />
-                    </div>
-                    <div>
-                        <p class="field-title">رمز عبور</p>
-                        <input class="text-input" type="password" placeholder="رمز عبور خود را وارد کنید" />
-                    </div>
-                    <div>
-                        <p class="field-title">تکرار رمز عبور </p>
-                        <input class="text-input" type="password" placeholder="رمز عبور خود را تکرار کنید" />
-                    </div>
-                    <br />
-                </div>
-                <button class="login-button">
-                    ایجاد حساب
-                </button>
+                    <button type="submit" class="login-button">
+                        ایجاد حساب
+                    </button>
+                </form>
                 <a href="../login/login.html" style="color: gray;">
                     حساب کاربری دارید؟
                 </a>
             </div>
         </div>
     </div>
+    <script src="register.js"></script>
 </body>
 
 </html>

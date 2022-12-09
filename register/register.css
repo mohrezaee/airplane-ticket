@@ -24,3 +24,8 @@ body {
     column-gap: 32px;
 }
 
+@media only screen and (max-width: 900px) {
+    .register-grid {
+        grid-template-columns: 1fr;
+    }
+}
