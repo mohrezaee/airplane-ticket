@@ -13,7 +13,8 @@
 
 <body dir="rtl" id="root">
     <nav class="home-navbar">
-        <img id="navbar-menu" class="navbar-menu" src="../imgs/menu.png" width="30px" height="30px" onclick="openNav()"/>
+        <img id="navbar-menu" class="navbar-menu" src="../imgs/menu.png" width="30px" height="30px"
+            onclick="openNav()" />
         <div id="navbar-side-menu" class="side-navbar">
             <span class="closebtn" onclick="closeNav()">&times;</span>
             <button id="main-menu-button" class="navbar-button">
@@ -42,17 +43,31 @@
     </div>
     <div class="search-ticket-container">
         <h2 class="card-title">جستجوی بلیط</h2>
-        <div class="row">
+        <div class="search-ticket-grid">
             <div class="city-autocomplete">
+                <p class="field-title">مبدا</p>
                 <input class="left-city-input" id="source-city-input" placeholder="انتخاب مبدا">
             </div>
-            <img src="../imgs/switch.png" width="30px" height="30px" class="switch-cities" />
             <div class="city-autocomplete">
+                <p class="field-title">مقصد</p>
                 <input class="middle-city-input" id="destination-city-input" placeholder="انتخاب مقصد" />
             </div>
-            <input type="date" class="date-input" />
-            <input type="date" class="date-input" />
-            <input type="number" placeholder="تعداد مسافر" id="passenger-number-input" />
+            <div>
+                <p class="field-title">تاریخ رفت</p>
+                <input type="date" class="date-input" />
+            </div>
+            <div>
+                <p class="field-title">تاریخ برگشت</p>
+                <input type="date" class="date-input" />
+            </div>
+            <div>
+                <p class="field-title">تعداد مسافر</p>
+                <div style="display: flex; align-items: center;background-color: #f6f5f5;">
+                    <button class="increment-button" id="increment-button">+</button>
+                    <input type="number" placeholder="تعداد مسافر" id="passenger-number-input" />
+                    <button class="decrement-button" id="decrement-button">-</button>
+                </div>
+            </div>
         </div>
 
         <button class="login-button" onclick="searchTicket()">

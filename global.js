@@ -10,6 +10,9 @@ mainMenuButton.addEventListener('click', function () {
 loginMenuButton.addEventListener('click', function () {
     window.location.href = "../login/login"
 })
+navbarProfile.addEventListener('click', function () {
+    window.location.href = "../profile/profile"
+})
 if (user) {
     navbarLoginButton.style.display = 'none'
     navbarProfile.style.display = 'block'
@@ -22,6 +25,8 @@ if (window.location.href.includes('home/home')) {
     mainMenuButton.classList.add('active')
 } else if (window.location.href.includes('login/login') || window.location.href.includes("/register/register")) {
     loginMenuButton.classList.add('active')
+} else if (window.location.href.includes('profile/profile')) {
+    navbarProfile.classList.add('active')
 }
 
 function logout() {
@@ -47,7 +52,6 @@ addEventListener("resize", e => {
         navbar.style.width = "100%";
     } 
     else {
-        console.log(navbar.style.width)
         if(navbar.style.width === "100%") {
             navbar.style.display = 'none'
             navbar.style.width = "0";

@@ -144,8 +144,7 @@ passengerNumberInput.addEventListener("input", function (e) {
 })
 
 function searchTicket() {
-	console.log('hiiiiii')
-	// window.location.href = 'ticket_list/ticket.html'
+	window.location.href = '../ticket_list/ticket.html'
 }
 
 
