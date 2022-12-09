@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="fa">
-<meta charset="UTF-8">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شرکت هواپیمایی مهسا</title>
     <link href="../index.css" rel="stylesheet" />
     <link href="home.css" rel="stylesheet" />
@@ -12,12 +13,27 @@
 
 <body dir="rtl" id="root">
     <nav class="home-navbar">
-        <button id="navbar-login-button" class="login-button" onclick="login()">
-            ورود / ثبت نام
-        </button>
-        <p id="navbar-profile"></p>
-        <a href="#" class="headerLogo" style="overflow:hidden;">
-            <h1 style="margin:0px;">هواپیمایی مهسا</h1>
+        <img id="navbar-menu" class="navbar-menu" src="../imgs/menu.png" width="30px" height="30px" onclick="openNav()"/>
+        <div id="navbar-side-menu" class="side-navbar">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <button id="main-menu-button" class="navbar-button">
+                صفحه اصلی
+            </button>
+            <button id="navbar-login-button" class="navbar-button" onclick="login()">
+                ورود / ثبت نام
+            </button>
+            <button id="navbar-profile" class="navbar-button">
+                پروفایل
+            </button>
+            <button id="navbar-aboutus" class="navbar-button">
+                درباره ما
+            </button>
+            <button id="navbar-logout" class="navbar-button" onclick="logout()">
+                خروج
+            </button>
+        </div>
+        <a href="#" class="headerLogo">
+            <p class="header-logo-title">هواپیمایی مهسا</p>
             <img src="../imgs/logo.png" height="35px" />
         </a>
     </nav>
@@ -82,6 +98,7 @@
     </div>
 
     <script src="home.js"></script>
+    <script src="../global.js"></script>
 </body>
 
 </html>
