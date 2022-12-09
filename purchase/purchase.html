@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta charset="UTF-8">
+
+<head>
+    <title>شرکت هواپیمایی مهسا</title>
+    <link href="../index.css" rel="stylesheet" />
+    <link href="purchase.css" rel="stylesheet" />
+    <link rel="icon" href="../favicon.svg">
+
+</head>
+
+<body dir="rtl" id="root">
+    <div class="passenger-container">
+        <h1 class="title">لیست مسافران</h1>
+        <div class="row">
+            <div class="flight-details">
+                    <img src="../imgs/logo.png" height="35px" style="display:inline;"/>
+                <div style="height: 100px; width: 30%; display: inline-block;">
+                    <h3 class="text" style="text-align:right; padding-right:30px; font-size:14pt;">
+                        پنجشنبه 16:30 | 1395/5/5
+                    </h3>
+                    <h2 class="text" style="text-align:right; padding-right:30px; margin-top:-10px; font-size:20pt;">
+                        همدان - زاهدان
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>
+                    مسافر
+                </th>
+                <th>
+                    شماره گذرنامه
+                </th>
+                <th>
+                    قیمت
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    سید محمدامین احمدزاده
+                </td>
+                <td>
+                    P90876598
+                </td>
+                <td>
+                    85,000,000 ریال
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="credential-input" type="string" name="fullname" placeholder="نام مسافر">
+                </td>
+                <td>
+                    <input class="credential-input" type="string" name="passport-number" placeholder="شماره گذرنامه مسافر">
+                </td>
+                <td>
+                    85,000,000 ریال
+                </td>
+            </tr>
+        </table>
+        <button class="edit-button">ویرایش</button>
+    </div>
+    <div>
+        <button class="continue-button">ادامه</button>
+    </div>
+
+</body>
+
+</html>
