@@ -14,6 +14,7 @@
   
   
   .title {
+	color: #202020;
 	text-align: center;
 	padding-bottom: 8px;
 	margin: 0.5rem 0px;
@@ -30,8 +31,11 @@
 	margin: 0.5rem 0px;
 	font-size: 16pt;
   }
+
+
   
   .time-text{
+	color: #202020;
 	text-align: center;
 	padding-bottom: 8px;
 	margin: 0.5rem 0px;
@@ -40,6 +44,7 @@
   }
   
   .time-text1{
+	color: #202020;
 	  text-align: right;
 	  padding-bottom: 8px;
 	  margin: 0.5rem 0px;
@@ -48,13 +53,28 @@
   }
   
   .time-text2{
+	color: #202020;
 	text-align: left;
 	padding-bottom: 8px;
 	margin: 0.5rem 0px;
 	font-size: 22pt;
   
   }
-  
+
+  .header-row {
+	display: flex;
+	align-items: center;
+	margin-top: 25px;
+	flex-direction: row-reverse;
+  }
+
+  .header-row2 {
+	display: flex;
+	align-items: center;
+	margin-top: 25px;
+	flex-direction: row-reverse;
+  }
+
   .heading {
 	height: 75px;
 	background-color: white;
@@ -64,14 +84,64 @@
 	width: 50%;
 	margin-top:15px;
 	margin-bottom: 30px;
+	align-items: center;
 	
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
 	.heading{
 		width: 60%;
 	}
   }
+
+@media only screen and (max-width: 950px) {
+	.heading{
+		width: 80%;
+		height: 235px;
+	}
+	.text {
+		font-size: 15pt;
+	}
+}
+
+@media only screen and (max-width: 645px) {
+	.heading{
+		width:80%;
+	}
+  
+	.time-text1{
+		font-size: 18pt;
+	}
+
+	.time-text2{
+	font-size: 18pt;
+	}
+	.text {
+		font-size: 13pt;
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+  
+	.time-text1{
+		font-size: 16pt;
+	}
+
+	.time-text2{
+	font-size: 16pt;
+	}
+
+	.text {
+		font-size: 11pt;
+	}
+}
+@media only screen and (max-width: 380px) {
+  
+	.text {
+		font-size: 8pt;
+	}
+}
 
 .subHeading {
 	margin-top:10px;
@@ -80,12 +150,25 @@
 	display: inline-block;
 	flex-grow: 1;
 	color: #575757;
-    background-color: #ffffff;
+    
 	align-items: center;
     text-decoration: none;
 	text-align: center;
 	font-size: 16pt;
-	
+}
+
+.subHeading2 {
+	margin-top:20px;
+	width:20%;
+    position: relative;
+	display: inline-block;
+	flex-grow: 1;
+	color: #575757;
+ 
+	align-items: center;
+    text-decoration: none;
+	text-align: center;
+	font-size: 16pt;
 }
 
 .subHeadingLine {
@@ -95,7 +178,6 @@
 	display: inline-block;
 	flex-grow: 1;
 	color: #575757;
-    background-color: #ffffff;
 	align-items: center;
     text-decoration: none;
 	text-align: center;
@@ -125,11 +207,27 @@
 	flex-grow: 1;
 	text-align: center;
   }
+
+  .time2{
+	width: 30%;
+	padding: 8px 4px;
+	font-size: 18px;
+	flex-grow: 1;
+	text-align: center;
+  }
   
  
   .image-box {
+	color: #202020;
 	width: 20%;
-	background-color: white;
+	text-align: center;
+	max-width:fit-content;
+	margin-bottom: 20px;
+  }
+
+  .image-box2 {
+	color: #202020;
+	width: 40%;
 	text-align: center;
 	max-width:fit-content;
 	margin-bottom: 20px;
@@ -137,20 +235,28 @@
   
   
   .row {
+	margin-top:30px;
 	display: flex;
-	height: 80%;
+	height: 70%;
 	align-items: center;
-	margin-top: 25px;
 	flex-direction: row-reverse;
   }
 
-  .header-row {
+  .row2 {
 	display: flex;
-	align-items: center;
+	height: 35%;
+	
 	margin-top: 25px;
 	flex-direction: row-reverse;
+	align-items: center;
   }
+
+
   
+  .limited-ticket{
+	font-size: 16pt;
+	color: brown;
+  }
   
   
   .price {
@@ -165,7 +271,20 @@
 	flex-grow: 1;
 	text-decoration: none;
 	vertical-align: middle;
-  
+  }
+
+  .price2 {
+	margin-left: 20px;
+	background-color: #ffffff;
+	border-radius: 20px;
+	border: 2px solid #290d1662;
+	height:80%;
+	width: 25%;
+	position: relative;
+	display: inline-block;
+	flex-grow: 1;
+	text-decoration: none;
+	vertical-align: middle;
   }
   
   
@@ -214,6 +333,10 @@
     background: #ca658362;
 }
 
+.price2:hover {
+    background: #ca658362;
+}
+
 
 .footer {
     width: 100%;
@@ -227,4 +350,64 @@
 	margin: 30px auto 0;
 	position: relative;
     font-size: 24px;
+}
+
+
+.editButton {
+	background-color: #e94059;
+	width: 100%;
+	
+	border-radius: 4px;
+	font-size: 24px;
+	align-items: center;
+	transition-duration: 200ms;
+	border: none;
+	margin-right: 5%;
+	margin-left: 5%;
+	color: white;
+	cursor: pointer;
+  }
+
+  @media (prefers-color-scheme: dark) {
+	.ticket-container {
+		background-color: #4d4d4d;
+		box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
+		0 0 10px 0 rgba(255, 255, 255, 0.1);
+	}
+	.price{
+		background-color: #202020;
+	}
+	.price2{
+		background-color: #202020;
+	}
+	.heading{
+		background-color: #4d4d4d;
+	}
+	.title {
+		color:#ffffff;
+	}
+	.text{
+		color:#ffffff;
+	}
+	.time-text{
+		color:#ffffff;
+	}
+	.time-text1{
+		color:#ffffff;
+	}
+	.time-text2{
+		color:#ffffff;
+	}
+	.subHeading {
+		color:#ffffff;
+	}
+	.subHeading2 {
+		color:#ffffff;
+	}
+	.image-box {
+		color:#ffffff;
+	  }
+	  .image-box2 {
+		color:#ffffff;
+	  }
 }

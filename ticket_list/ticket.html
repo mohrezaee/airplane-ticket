@@ -8,7 +8,7 @@
     <link href="../index.css" rel="stylesheet" />
     <link href="ticket.css" rel="stylesheet" />
     <link rel="icon" href="../favicon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
 <body dir="rtl" id="root">
@@ -35,109 +35,25 @@
         </div>
         <a href="#" class="headerLogo">
             <p class="header-logo-title">هواپیمایی مهسا</p>
-            <img src="../imgs/logo.png" height="35px" />
+            <picture>
+                <source
+                    srcset="../imgs/logoW.png"
+                    media="(prefers-color-scheme: dark)">
+                    <img src="../imgs/logo.png" height="35px" />
+            </picture>
         </a>
     </nav>
 
-    <div class="heading">  
-        <div class="header-row ">
-            <div class="subHeading" style="text-align: right;" >
-				همدان
-			</div>
-			<div class="subHeading">
-				<img src="../imgs/arrow.png" style="height:25px" />
-			</div>
-			<div class="subHeading" style="text-align: left;" >
-				 زاهدان
-			</div>
-            <div class="subHeadingLine">
-				<img src="../imgs/line.png" style=" height: 35px" />
-			</div>
-			<div class="subHeadingLine" style=" margin-top: 30px;">
-				<img src="../imgs/calendar.png" style="height: 30px;" />
-			</div>
-			<div class="subHeading" style="text-align: center;" >
-				1401/2/2
-			</div>
-			
-			<div class="subHeadingLine">
-				<img src="../imgs/line.png" style="height: 35px" />
-			</div>
-			<div class="subHeadingLine" style=" margin-top: 20px">
-				<img src="../imgs/passenger.png" style="height: 25px;" />
-			</div>
-			<div class="subHeading">
-				3 مسافر
-			</div>
-			<div class="subHeadingLine">
-				<img src="../imgs/line.png" style="height: 35px" />
-			</div>
-			<a href="http://example.com" class="subHeading" style="text-align: left;">
-				ویرایش 
-			</a>
-        </div>
-    </div>
-
-    <h2 class="title">لیست بلیط های یافت شده</h2>
-    <div class="ticket-container">  
-        <div class="row">
-            <a href="#" class="price">
-                <h1 class="text" style="text-align:center; margin-top:50px;">
-                    اکونومی<br> 1.500.000 تومان
-                </h1>
-            </a>
-            <a href="#" class="price">
-                <h1 class="text" style="text-align:center; margin-top:50px;">
-                    بیزینس<br> 2.500.000 تومان
-                </h1>
-            </a>
-            <div class="time1">
-                <h3 class="time-text1">20:30</h3>
-                <h3 class="time-text1">زاهدان</h3>
-            </div>
-            <div class="image-box">
-                <h3>مدت حرکت: 4 ساعت</h3>
-                <img src="../imgs/airplane.png" style=" max-width:100%;" />
-            </div>
-            <div class="time1">
-                <h3 class="time-text2">16:30</h3>
-                <h3 class="time-text2">همدان</h3>
-            </div>
-        </div>
-    </div>
-
-	<div class="ticket-container">  
-        <div class="row">
-            <a href="#" class="price">
-                <h1 class="text" style="text-align:center; margin-top:50px;">
-                    اکونومی<br> 1.500.000 تومان
-                </h1>
-            </a>
-            <a href="#" class="price">
-                <h1 class="text" style="text-align:center; margin-top:50px;">
-                    بیزینس<br> 2.500.000 تومان
-                </h1>
-            </a>
-            <div class="time1">
-                <h3 class="time-text1">20:30</h3>
-                <h3 class="time-text1">زاهدان</h3>
-            </div>
-            <div class="image-box">
-                <h3>مدت حرکت: 4 ساعت</h3>
-                <img src="../imgs/airplane.png" style=" max-width:100%;" />
-            </div>
-            <div class="time1">
-                <h3 class="time-text2">16:30</h3>
-                <h3 class="time-text2">همدان</h3>
-            </div>
-        </div>
-    </div>
+    
 
     
-    <div class="space">
 
-    </div>
 
+    
+    <div class="space"></div>
+
+   
+    <script src="ticket.js"></script>
     <script src="../global.js"></script>
 </body>
 
