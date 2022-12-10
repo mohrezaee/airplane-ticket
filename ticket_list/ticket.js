@@ -134,13 +134,17 @@ function theme1(){
         imageBox.classList.add('image-box2');
         let textImage = document.createElement('h3');
        
-        let parsedReachHour = new Date('2019-06-11T'+ticketList[i].reachHour);
-        let parsedStartHour = new Date('2019-06-11T'+ticketList[i].startHour);
+        let parsedReachHour = new Date('2019-06-11T'+ticketBoughtList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketBoughtList[i].startHour);
         let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
         diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
         diff = diff.replace(":0","");
+        if (diff.includes("0:")){
+            textImage.textContent =  "مدت حرکت: " + diff.replace("0:","") + "دقیقه";
+        } else{
+            textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
+        }
 
-        textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
         imageBox.appendChild(textImage);
         let imageImage = document.createElement('img');
         if (window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -339,13 +343,17 @@ function theme2(){
         let textImage = document.createElement('h3');
 
 
-        let parsedReachHour = new Date('2019-06-11T'+ticketList[i].reachHour);
-        let parsedStartHour = new Date('2019-06-11T'+ticketList[i].startHour);
+        let parsedReachHour = new Date('2019-06-11T'+ticketBoughtList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketBoughtList[i].startHour);
         let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
         diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
         diff = diff.replace(":0","");
-        
-        textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
+        if (diff.includes("0:")){
+            textImage.textContent =  "مدت حرکت: " + diff.replace("0:","") + "دقیقه";
+        } else{
+            textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
+        }
+
         imageBox.appendChild(textImage);
         let imageImage = document.createElement('img');
         if (window.matchMedia('(prefers-color-scheme: dark)').matches){

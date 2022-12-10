@@ -192,6 +192,49 @@
   margin-right: auto;
 }
 
+@media (prefers-color-scheme: dark) {
+	.ticket-container {
+		background-color: #4d4d4d;
+		box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
+		0 0 10px 0 rgba(255, 255, 255, 0.1);
+	}
+  .price{
+		background-color: #202020;
+	}
+	.price2{
+		background-color: #202020;
+	}
+  .title {
+		color:#ffffff;
+	}
+	.text{
+		color:#ffffff;
+	}
+	.time-text{
+		color:#ffffff;
+	}
+	.time-text1{
+		color:#ffffff;
+	}
+	.time-text2{
+		color:#ffffff;
+	}
+	.subHeading {
+		color:#ffffff;
+	}
+	.subHeading2 {
+		color:#ffffff;
+	}
+	.image-box {
+		color:#ffffff;
+	  }
+	  .image-box2 {
+		color:#ffffff;
+	  }
+    .extra-info-ticket {
+      color:#ffffff;
+    }
+}
 
 @media only screen and (max-width: 950px) {
 	.text {
