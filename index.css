@@ -1,12 +1,15 @@
 html,
-body,
-#root {
+body {
   width: 100%;
-  height: 100%;
-  min-height: 100%;
   background-color: rgb(245, 245, 245);
   padding: 0;
   margin: 0;
+}
+html{
+  height: 100%;
+}
+body {
+  min-height: 100vh;
 }
 
 * {
@@ -16,6 +19,16 @@ body,
 }
 p {
   margin: 0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
 
 .login-card {
@@ -52,16 +65,14 @@ p {
 }
 
 .center-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  margin: 0px auto;
+  width: 50%;
+  margin-top: 30px;
 }
 
 .text-input {
   padding: 8px 4px;
-  width: 300px;
+  width: 100%;
   border-style: solid;
   border-color: #c7c7c7;
   border-width: 2px;
@@ -227,6 +238,9 @@ p {
     color: black;
     border: none;
   }
+  .center-container {
+    width: 95%;
+  }
 }
 @media only screen and (min-width: 600px) {
   .header-logo-title {
@@ -248,4 +262,51 @@ p {
   src: url("fonts/Yekan.ttf");
   font-weight: normal;
   font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body,
+  #root {
+    background-color: rgb(32, 32, 32);
+  }
+  .home-navbar {
+    background-color: rgb(51, 51, 51);
+  }
+
+  .navbar-button {
+    background-color: rgb(32, 28, 28);
+    color: white;
+  }
+  .navbar-button:hover {
+    background-color: rgb(67, 63, 63);
+    color: #e94059;
+  }
+
+  .side-navbar {
+    background-color: rgb(51, 51, 51);
+  }
+  .header-logo-title {
+    color: white;
+  }
+  .text-input {
+    background-color: #4a4949;
+    color: white;
+  }
+  .text-input:focus {
+    border-color: #e94059;
+    border-left-color: #e94059;
+    color: white;
+    background-color: rgb(77, 76, 76);
+  }
+  .login-card {
+    background-color: #302f2f;
+  }
+  .card-title {
+    color: white;
+  }
+
+  .closebtn {
+    color: white;
+  }
 }

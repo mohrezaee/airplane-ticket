@@ -46,26 +46,26 @@
         <div class="search-ticket-grid">
             <div class="city-autocomplete">
                 <p class="field-title">مبدا</p>
-                <input class="left-city-input" id="source-city-input" placeholder="انتخاب مبدا">
+                <input class="text-input" id="source-city-input" placeholder="انتخاب مبدا">
             </div>
             <div class="city-autocomplete">
                 <p class="field-title">مقصد</p>
-                <input class="middle-city-input" id="destination-city-input" placeholder="انتخاب مقصد" />
+                <input class="text-input" id="destination-city-input" placeholder="انتخاب مقصد" />
             </div>
             <div>
                 <p class="field-title">تاریخ رفت</p>
-                <input type="date" class="date-input" />
+                <input type="date" class="text-input" />
             </div>
             <div>
                 <p class="field-title">تاریخ برگشت</p>
-                <input type="date" class="date-input" />
+                <input type="date" class="text-input" />
             </div>
             <div>
                 <p class="field-title">تعداد مسافر</p>
-                <div style="display: flex; align-items: center;background-color: #f6f5f5;">
-                    <button class="increment-button" id="increment-button">+</button>
+                <div class="passengers-number">
+                    <button class="increment-button" id="increment-button" onclick="incrementPassengerNumber()">+</button>
                     <input type="number" placeholder="تعداد مسافر" id="passenger-number-input" />
-                    <button class="decrement-button" id="decrement-button">-</button>
+                    <button class="decrement-button" id="decrement-button" onclick="decrementPassengerNumber()">-</button>
                 </div>
             </div>
         </div>
@@ -74,6 +74,40 @@
             جستجو
         </button>
 
+    </div>
+
+    <h1 class="adv-subtitle">
+        برای سفر بعدی خود برنامه ریزی کنید
+    </h1>
+    <div class="advertisement-container">
+        <div class="advertisement-card">
+            <div class="adv-card-title">
+                <p>لس آنجلس</p>
+                <span class="adv-caption">7 آذر 1401 - 20 آذر 1401</span>
+            </div>
+            <img class="adv-card-image" src="../imgs/adv1.jpg" />
+        </div>
+        <div class="advertisement-card">
+            <div class="adv-card-title">
+                <p>لس آنجلس</p>
+                <span class="adv-caption">7 آذر 1401 - 20 آذر 1401</span>
+            </div>
+            <img class="adv-card-image" src="../imgs/adv2.jpg" />
+        </div>
+        <div class="advertisement-card">
+            <div class="adv-card-title">
+                <p>لس آنجلس</p>
+                <span class="adv-caption">7 آذر 1401 - 20 آذر 1401</span>
+            </div>
+            <img class="adv-card-image" src="../imgs/adv3.jpg" />
+        </div>
+        <div class="advertisement-card">
+            <div class="adv-card-title">
+                <p>لس آنجلس</p>
+                <span class="adv-caption">7 آذر 1401 - 20 آذر 1401</span>
+            </div>
+            <img class="adv-card-image" src="../imgs/adv4.jpg" />
+        </div>
     </div>
 
     <script src="home.js"></script>

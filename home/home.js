@@ -136,7 +136,7 @@ var countries = [{ "id": 1, "name": "آذربایجان شرقی" },
 autocomplete(document.getElementById("source-city-input"), countries);
 autocomplete(document.getElementById("destination-city-input"), countries);
 
-passengerNumberInput = document.getElementById("passenger-number-input")
+const passengerNumberInput = document.getElementById("passenger-number-input")
 passengerNumberInput.addEventListener("input", function (e) {
 	if (e.target.value < 1) {
 		passengerNumberInput.value = 1
@@ -144,5 +144,14 @@ passengerNumberInput.addEventListener("input", function (e) {
 })
 
 function searchTicket() {
-	window.location.href = '../ticket_list/ticket.html'
+	window.location.href = '../ticket_list/ticket'
+}
+
+
+function incrementPassengerNumber() {
+	passengerNumberInput.value = passengerNumberInput.value === "" ? 1 : parseInt(passengerNumberInput.value) + 1
+}
+function decrementPassengerNumber() {
+	passengerNumberInput.value = passengerNumberInput.value === "" ? 1 : 
+	(parseInt(passengerNumberInput.value) - 1 < 1 ? 1 : parseInt(passengerNumberInput.value) - 1)
 }

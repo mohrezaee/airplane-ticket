@@ -58,83 +58,6 @@
   color: #ffffff;
 }
 
-.left-city-input {
-  padding: 8px 4px;
-  width: 100%;
-  border-style: solid;
-  border-color: #c7c7c7;
-  border-width: 2px;
-  background-color: #f6f5f5;
-  font-size: 20px;
-  border-radius: 4px;
-  transition-duration: 200ms;
-  border-right-width: 2px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding-right: 24px;
-}
-
-.left-city-input:focus {
-  outline: none;
-  border-color: #636060;
-  border-left-color: black;
-  background-color: white;
-}
-
-.middle-city-input {
-  padding: 8px 4px;
-  width: 100%;
-  border-style: solid;
-  border-color: #c7c7c7;
-  border-width: 2px;
-  background-color: #f6f5f5;
-  font-size: 20px;
-  border-radius: 4px;
-  transition-duration: 200ms;
-  border-left-width: 2px;
-  border-radius: 0px;
-}
-
-.middle-city-input:focus {
-  outline: none;
-  border-color: #636060;
-  border-left-color: black;
-  background-color: white;
-}
-
-.switch-cities {
-  background-color: white;
-  border-radius: 100%;
-  border: solid 2px #e94059;
-  padding: 4px;
-  margin: 0px -15px;
-  z-index: 4;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.date-input {
-  padding: 8px 4px;
-  width: 100%;
-  border-style: solid;
-  border-color: #c7c7c7;
-  border-width: 2px;
-  background-color: #f6f5f5;
-  font-size: 20px;
-  border-radius: 4px;
-  transition-duration: 200ms;
-  border-left-width: 2px;
-  border-radius: 0px;
-  flex-grow: 1;
-}
-
-.date-input:focus {
-  outline: none;
-  border-color: #636060;
-  border-left-color: black;
-  background-color: white;
-}
-
 #passenger-number-input {
   padding: 8px 4px;
   width: 100%;
@@ -212,7 +135,7 @@
 }
 
 .advertisement-card:hover .adv-card-title {
-  background:rgba(231, 229, 229, 0.8);
+  background: rgba(231, 229, 229, 0.8);
 }
 
 .adv-subtitle {
@@ -252,17 +175,47 @@
   margin-right: 16px;
 }
 
+.passengers-number {
+  display: flex;
+  align-items: center;
+  border: solid 2px #c7c7c7;
+  background-color: #f6f5f5;
+  border-radius: 4px;
+}
+
 .increment-button {
-  font-size: 20px;
+  font-size: 30px;
+  border-radius: 4px;
   width: 50px;
   border: none;
   background-color: #f6f5f5;
   height: 100%;
+  border-left: 1px solid black;
 }
 .decrement-button {
-  font-size: 20px;
+  font-size: 30px;
+  border-radius: 4px;
   width: 50px;
   border: none;
   background-color: #f6f5f5;
   height: 100%;
+  border-right: 1px solid black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .search-ticket-container {
+    background-color: #302f2f;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
+      0 0 10px 0 rgba(255, 255, 255, 0.1);
+  }
+  .card-title {
+    color: white;
+  }
+  .passengers-number,.increment-button,.decrement-button,#passenger-number-input{
+    background-color: #4a4949;
+    color: white;
+  }
+  .increment-button,.decrement-button {
+    border-color: white;
+  }
 }
