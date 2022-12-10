@@ -1,6 +1,9 @@
-let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:00", reachHour:"15:00", priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/2/2", isEconomy:false};
-let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"9:30", reachHour:"12:30", priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/2/2", isEconomy:true};
-let ticketObj2 = {source:"شیراز", destination:"اهواز", count:25, startHour:"12:15", reachHour:"15:15", priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/2/2", isEconomy:false};
+let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:00", reachHour:"15:00",
+ priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/2/2", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
+let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"9:30", reachHour:"12:30",
+ priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/2/2", isEconomy:true, people:["محمد رضایی"]};
+let ticketObj2 = {source:"شیراز", destination:"اهواز", count:25, startHour:"12:15", reachHour:"15:15",
+ priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/2/2", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
 let passengerCount = 3;
 //add constructor when database added
 let ticketList = [ticketObj,ticketObj1,ticketObj2];
@@ -306,7 +309,7 @@ function theme2(){
         allTickets.appendChild(ticketContainer);
         root.appendChild(allTickets);
         ticketContainer.appendChild(row);
-        let row2 = document.createElement('div');
+  
     
         let sourceInfo = document.createElement('div');
         sourceInfo.classList.add('time1');
