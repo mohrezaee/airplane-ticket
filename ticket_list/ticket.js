@@ -134,8 +134,8 @@ function theme1(){
         imageBox.classList.add('image-box2');
         let textImage = document.createElement('h3');
        
-        let parsedReachHour = new Date('2019-06-11T'+ticketBoughtList[i].reachHour);
-        let parsedStartHour = new Date('2019-06-11T'+ticketBoughtList[i].startHour);
+        let parsedReachHour = new Date('2019-06-11T'+ticketList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketList[i].startHour);
         let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
         diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
         diff = diff.replace(":0","");
@@ -166,23 +166,25 @@ function theme1(){
         textDest.textContent =  ticketList[i].destination;
         destInfo.appendChild(textDest);
     
-        let ecoContainer = document.createElement('a');
-        ecoContainer.href = "#";
+        let ecoContainer = document.createElement('div');
         ecoContainer.classList.add('price2');
         let ecoText = document.createElement('h1');
         ecoText.classList.add('text');
         ecoText.style = "text-align:center; margin-top:50px;";
         ecoText.textContent = "اکونومی:\n" +  ticketList[i].priceEconomy + "تومان";
         ecoContainer.appendChild(ecoText);
+        ecoContainer.style.cursor = "pointer";
+        ecoContainer.addEventListener("click", e => routeToPurchase(ticketList[i]));
     
-        let businessContainer = document.createElement('a');
-        businessContainer.href = "#";
+        let businessContainer = document.createElement('div');
         businessContainer.classList.add('price2');
         let businessText = document.createElement('h1');
         businessText.classList.add('text');
         businessText.style = "text-align:center; margin-top:50px;";
         businessText.textContent = "بیزینس:\n" +   ticketList[i].priceBusiness + "تومان";
         businessContainer.appendChild(businessText);
+        businessContainer.style.cursor = "pointer";
+        businessContainer.addEventListener("click", e => routeToPurchase(ticketList[i], businessContainer));
     
         row2.appendChild(businessContainer);
         row2.appendChild(ecoContainer);
@@ -343,8 +345,8 @@ function theme2(){
         let textImage = document.createElement('h3');
 
 
-        let parsedReachHour = new Date('2019-06-11T'+ticketBoughtList[i].reachHour);
-        let parsedStartHour = new Date('2019-06-11T'+ticketBoughtList[i].startHour);
+        let parsedReachHour = new Date('2019-06-11T'+ticketList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketList[i].startHour);
         let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
         diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
         diff = diff.replace(":0","");
@@ -376,23 +378,25 @@ function theme2(){
         textDest.textContent =  ticketList[i].destination;
         destInfo.appendChild(textDest);
     
-        let ecoContainer = document.createElement('a');
-        ecoContainer.href = "#";
+        let ecoContainer = document.createElement('div');
         ecoContainer.classList.add('price');
         let ecoText = document.createElement('h1');
         ecoText.classList.add('text');
         ecoText.style = "text-align:center; margin-top:50px;";
         ecoText.textContent = "اکونومی:\n" +  ticketList[i].priceEconomy + "تومان";
         ecoContainer.appendChild(ecoText);
+        ecoContainer.style.cursor = "pointer";
+        ecoContainer.addEventListener("click", e => routeToPurchase(ticketList[i]));
     
-        let businessContainer = document.createElement('a');
-        businessContainer.href = "#";
+        let businessContainer = document.createElement('div');
         businessContainer.classList.add('price');
         let businessText = document.createElement('h1');
         businessText.classList.add('text');
         businessText.style = "text-align:center; margin-top:50px;";
         businessText.textContent = "بیزینس:\n" +   ticketList[i].priceBusiness + "تومان";
         businessContainer.appendChild(businessText);
+        businessContainer.style.cursor = "pointer";
+        businessContainer.addEventListener("click", e => routeToPurchase(ticketList[i], businessContainer));
     
         row.appendChild(businessContainer);
         row.appendChild(ecoContainer);
@@ -418,15 +422,11 @@ start(x);
 x.addListener(start);
      
   
-
-
-function purchaseTicket() {
-
-	// TODO if user is logged in 
-    //          window.location.href = 'purchase/purchase.html'
-    //      else
-    //          window.location.href = 'login/login.html' and then window.location.href = 'purchase/purchase.html'
+function routeToPurchase(ticketObj) {
+    if (!localStorage.getItem("user")) {
+        alert("ابتدا وارد حساب کاربری خود شوید!")
+    } else {
+        localStorage.setItem("ticketObj", JSON.stringify(ticketObj));
+        window.location.href = "../purchase/purchase";
+    }
 }
-
-
-

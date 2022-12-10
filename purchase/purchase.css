@@ -99,3 +99,12 @@ td {
 .continue-button:hover {
     background-color: #bf3449;
 }
+
+@media (prefers-color-scheme: dark) {
+  .passenger-container {
+    color: white;
+    background-color: #302f2f;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1),
+      0 0 10px 0 rgba(255, 255, 255, 0.1);
+  }
+}

@@ -12,6 +12,39 @@
 </head>
 
 <body dir="rtl" id="root">
+    <nav class="home-navbar">
+        <img id="navbar-menu" class="navbar-menu" src="../imgs/menu.png" width="30px" height="30px"
+            onclick="openNav()" />
+        <div id="navbar-side-menu" class="side-navbar">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <button id="main-menu-button" class="navbar-button">
+                صفحه اصلی
+            </button>
+            <button id="navbar-login-button" class="navbar-button" onclick="login()">
+                ورود / ثبت نام
+            </button>
+            <button id="navbar-profile" class="navbar-button">
+                پروفایل
+            </button>
+            <button id="navbar-aboutus" class="navbar-button">
+                درباره ما
+            </button>
+            <button id="navbar-logout" class="navbar-button" onclick="logout()">
+                خروج
+            </button>
+        </div>
+        <a href="#" class="headerLogo">
+            <p class="header-logo-title">هواپیمایی مهسا</p>
+            <picture>
+                <source
+                    srcset="../imgs/logoW.png"
+                    media="(prefers-color-scheme: dark)">
+                    <img src="../imgs/logo.png" height="35px" />
+            </picture>
+           
+        </a>
+    </nav>
+
     <div class="passenger-container">
         <h1 class="title">لیست مسافران</h1>
         <div class="row">
@@ -27,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <table>
+        <table id="passenger-table">
             <tr>
                 <th>
                     مسافر
@@ -39,28 +72,6 @@
                     قیمت
                 </th>
             </tr>
-            <tr>
-                <td>
-                    سید محمدامین احمدزاده
-                </td>
-                <td>
-                    P90876598
-                </td>
-                <td>
-                    85,000,000 ریال
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class="text-input" type="string" name="fullname" placeholder="نام مسافر">
-                </td>
-                <td>
-                    <input class="text-input" type="string" name="passport-number" placeholder="شماره گذرنامه مسافر">
-                </td>
-                <td>
-                    85,000,000 ریال
-                </td>
-            </tr>
         </table>
         <button class="edit-button">ویرایش</button>
     </div>
@@ -68,6 +79,8 @@
         <button class="continue-button">ادامه</button>
     </div>
 
+    <script src="purchase.js"></script>
+    <script src="../global.js"></script>
 </body>
 
 </html>
