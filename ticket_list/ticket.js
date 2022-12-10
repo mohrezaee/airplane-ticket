@@ -1,10 +1,10 @@
-let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:00", reachHour:"15:00",
+let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:50", reachHour:"15:00",
  priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/2/2", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
-let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"9:30", reachHour:"12:30",
+let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"09:30", reachHour:"12:30",
  priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/2/2", isEconomy:true, people:["محمد رضایی"]};
 let ticketObj2 = {source:"شیراز", destination:"اهواز", count:25, startHour:"12:15", reachHour:"15:15",
  priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/2/2", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
-let passengerCount = 3;
+
 //add constructor when database added
 let ticketList = [ticketObj,ticketObj1,ticketObj2];
 
@@ -73,7 +73,7 @@ function theme1(){
     dateHeader.style ="text-align: right;";
 
     let passengerHeader = document.createElement('div');
-    passengerHeader.textContent = passengerCount + " مسافر" ; 
+    passengerHeader.textContent = ticketObj.people.length + " مسافر" ; 
     passengerHeader.classList.add('subHeading');
     passengerHeader.style ="text-align: left;";
 
@@ -133,7 +133,13 @@ function theme1(){
         let imageBox = document.createElement('div');
         imageBox.classList.add('image-box2');
         let textImage = document.createElement('h3');
-        let diff = parseInt( ticketList[i].reachHour.replace(':','.')) - parseInt( ticketList[i].startHour.replace(':','.'));
+       
+        let parsedReachHour = new Date('2019-06-11T'+ticketList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketList[i].startHour);
+        let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
+        diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
+        diff = diff.replace(":0","");
+
         textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
         imageBox.appendChild(textImage);
         let imageImage = document.createElement('img');
@@ -180,8 +186,8 @@ function theme1(){
         row1.appendChild(imageBox);
         row1.appendChild(sourceInfo);
     
-        let passengerCount = 3;
-        if (passengerCount * 3 >  ticketList[i].count){
+        
+        if (ticketList[i].people.length * 3 >  ticketList[i].count){
             ticketContainer.appendChild(limitedTicket);
         }
     }
@@ -251,11 +257,14 @@ function theme2(){
         passengerImage.src = "../imgs/passenger.png";
     }
 
+   
+
+
     passengerImage.style="height:22px";
     passengerImageHeader.style = " margin-top: 20px;";
     passengerImageHeader.classList.add('subHeadingLine');   
     let passengerHeader = document.createElement('div');
-    passengerHeader.textContent = passengerCount + " مسافر" ; 
+    passengerHeader.textContent = ticketObj.people.length + " مسافر" ; 
     passengerHeader.classList.add('subHeading');
 
     let lineImageHeader1 = document.createElement('div'); 
@@ -304,13 +313,16 @@ function theme2(){
         let row = document.createElement('div');
         let limitedTicket = document.createElement('h1');
         limitedTicket.classList.add('limited-ticket');
+
+        
+        
+   
         limitedTicket.textContent = '*ظرفیت محدود است.'
         row.classList.add('row');
         allTickets.appendChild(ticketContainer);
         root.appendChild(allTickets);
         ticketContainer.appendChild(row);
   
-    
         let sourceInfo = document.createElement('div');
         sourceInfo.classList.add('time1');
         let textStartHour = document.createElement('h3');
@@ -322,11 +334,17 @@ function theme2(){
         textSource.textContent =  ticketList[i].source;
         sourceInfo.appendChild(textSource);
     
-    
         let imageBox = document.createElement('div');
         imageBox.classList.add('image-box');
         let textImage = document.createElement('h3');
-        let diff = parseInt( ticketList[i].reachHour.replace(':','.')) - parseInt( ticketList[i].startHour.replace(':','.'));
+
+
+        let parsedReachHour = new Date('2019-06-11T'+ticketList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketList[i].startHour);
+        let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
+        diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
+        diff = diff.replace(":0","");
+        
         textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
         imageBox.appendChild(textImage);
         let imageImage = document.createElement('img');
@@ -375,7 +393,7 @@ function theme2(){
         row.appendChild(sourceInfo);
     
         
-        if (passengerCount * 3 >  ticketList[i].count){
+        if (ticketList[i].people.length * 3 >  ticketList[i].count){
             ticketContainer.appendChild(limitedTicket);
         }
 

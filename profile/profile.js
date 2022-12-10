@@ -1,9 +1,9 @@
-let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:00", reachHour:"15:00",
- priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/2/2", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
-let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"9:30", reachHour:"12:30",
- priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/2/2", isEconomy:true, people:["محمد رضایی"]};
+let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:50", reachHour:"15:00",
+ priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/02/20", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
+let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"09:30", reachHour:"12:30",
+ priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/02/20", isEconomy:true, people:["محمد رضایی"]};
 let ticketObj2 = {source:"شیراز", destination:"اهواز", count:25, startHour:"12:15", reachHour:"15:15",
- priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/2/2", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
+ priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/02/20", isEconomy:false, people:["محمد رضایی","امین احمدزاده","‌ارسلان مسعودی‌فرد"]};
 let ticketBoughtList = [ticketObj,ticketObj1];
 
 
@@ -69,7 +69,11 @@ function theme1(){
         let imageBox = document.createElement('div');
         imageBox.classList.add('image-box2');
         let textImage = document.createElement('h3');
-        let diff = parseInt( ticketBoughtList[i].reachHour.replace(':','.')) - parseInt( ticketBoughtList[i].startHour.replace(':','.'));
+        let parsedReachHour = new Date('2019-06-11T'+ticketBoughtList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketBoughtList[i].startHour);
+        let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
+        diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
+        diff = diff.replace(":0","");
         textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
         imageBox.appendChild(textImage);
         let imageImage = document.createElement('img');
@@ -180,7 +184,12 @@ function theme2(){
         let imageBox = document.createElement('div');
         imageBox.classList.add('image-box');
         let textImage = document.createElement('h3');
-        let diff = parseInt( ticketBoughtList[i].reachHour.replace(':','.')) - parseInt( ticketBoughtList[i].startHour.replace(':','.'));
+
+        let parsedReachHour = new Date('2019-06-11T'+ticketBoughtList[i].reachHour);
+        let parsedStartHour = new Date('2019-06-11T'+ticketBoughtList[i].startHour);
+        let diff = parsedReachHour.getTime() - parsedStartHour.getTime();
+        diff = Math.floor(diff / (1000 * 60 * 60)) + ":" + Math.floor((diff / (1000 * 60)) % 60);
+        diff = diff.replace(":0","");
         textImage.textContent =  "مدت حرکت: " + diff + "ساعت";
         imageBox.appendChild(textImage);
         let imageImage = document.createElement('img');
