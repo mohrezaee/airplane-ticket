@@ -1,9 +1,11 @@
-let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:00", reachHour:"15:00", priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/2/2"};
-let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"9:30", reachHour:"12:30", priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/2/2"};
-let ticketObj2 = {source:"شیراز", destination:"اهواز", count:25, startHour:"12:15", reachHour:"15:15", priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/2/2"};
+let ticketObj = {source:"شیراز", destination:"اهواز", count:5, startHour:"12:00", reachHour:"15:00", priceBusiness:"13.000.000", priceEconomy:'1.300.00', date:"1401/2/2", isEconomy:false};
+let ticketObj1 = {source:"شیراز", destination:"اهواز", count:15, startHour:"9:30", reachHour:"12:30", priceBusiness:"12.500.000", priceEconomy:'1.400.00', date:"1401/2/2", isEconomy:true};
+let ticketObj2 = {source:"شیراز", destination:"اهواز", count:25, startHour:"12:15", reachHour:"15:15", priceBusiness:"12.000.000", priceEconomy:'1.100.00', date:"1401/2/2", isEconomy:false};
 let passengerCount = 3;
-//add constructor when database came
+//add constructor when database added
 let ticketList = [ticketObj,ticketObj1,ticketObj2];
+
+
 function start(x) {
     if (x.matches) { 
         while(allTickets.firstChild){
@@ -180,6 +182,10 @@ function theme1(){
             ticketContainer.appendChild(limitedTicket);
         }
     }
+
+    let space = document.createElement('div');
+    space.classList.add('space');
+    allTickets.appendChild(space);
 }
 
 function theme2(){
@@ -369,13 +375,16 @@ function theme2(){
         if (passengerCount * 3 >  ticketList[i].count){
             ticketContainer.appendChild(limitedTicket);
         }
+
+        let space = document.createElement('div');
+        space.classList.add('space');
+        allTickets.appendChild(space);
     }
 }
 
 
 
 let x = window.matchMedia("(max-width:950px)");
-
 start(x); 
 x.addListener(start);
      

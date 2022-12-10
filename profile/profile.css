@@ -21,13 +21,15 @@
   margin-bottom:50px;
   font-size: 26pt;
 }
-
 .text {
-  text-align: right;
-  padding-bottom: 8px;
-  margin: 0.5rem 0px;
-  font-size: 16pt;
-}
+	text-decoration: none;
+	color: #202020;
+	text-align: right;
+	padding-bottom: 8px;
+	margin: 0.5rem 0px;
+	font-size: 16pt;
+  }
+
 
 .time-text{
   text-align: center;
@@ -85,6 +87,14 @@
 }
 
 .time2{
+	width: 30%;
+	padding: 8px 4px;
+	font-size: 18px;
+	flex-grow: 1;
+	text-align: center;
+  }
+
+.timeForTime{
   background-color: #ffffff;
 	border-radius: 20px;
 	border: 2px solid #290d1662;
@@ -99,11 +109,19 @@
 
 .image-box {
   width: 30%;
-  background-color: white;
+  color: #202020;
   text-align: center;
   max-width:fit-content;
   margin-bottom: 20px;
 }
+
+.image-box2 {
+	color: #202020;
+	width: 40%;
+	text-align: center;
+	max-width:fit-content;
+	margin-bottom: 20px;
+  }
 
 
 .row {
@@ -113,6 +131,14 @@
   margin-top: 1rem;
   flex-direction: row-reverse;
   margin-bottom: 16px;
+}
+
+.row2 {
+	display: flex;
+	height: 35%;
+	margin-top: 25px;
+	flex-direction: row-reverse;
+	align-items: center;
 }
 
 
@@ -141,7 +167,19 @@
 
 }
 
-
+.price2 {
+	margin-left: 20px;
+	background-color: #ffffff;
+	border-radius: 20px;
+	border: 2px solid #290d1662;
+	height:80%;
+	width: 25%;
+	position: relative;
+	display: inline-block;
+	flex-grow: 1;
+	text-decoration: none;
+	vertical-align: middle;
+  }
 
 .headerLogo {
   text-decoration: none;
@@ -154,3 +192,26 @@
   margin-right: auto;
 }
 
+
+@media only screen and (max-width: 950px) {
+	.text {
+		font-size: 15pt;
+	}
+}
+
+@media only screen and (max-width: 645px) {
+	.text {
+		font-size: 13pt;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.text {
+		font-size: 11pt;
+	}
+}
+@media only screen and (max-width: 380px) {
+	.text {
+		font-size: 8pt;
+	}
+}
