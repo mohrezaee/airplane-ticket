@@ -29,6 +29,9 @@ let allTickets =  document.createElement('div');
 
 function theme1(){
     let edit = document.createElement('button');
+    edit.addEventListener('click', function() {
+        window.location.href = "../home/home"
+    })
     edit.classList.add("editButton");
     edit.style = "text-align: center;";
     edit.textContent = 'ویرایش';    

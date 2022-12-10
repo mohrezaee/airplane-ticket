@@ -202,6 +202,16 @@
   border-right: 1px solid black;
 }
 
+.home-footer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
   .search-ticket-container {
     background-color: #302f2f;
@@ -217,5 +227,9 @@
   }
   .increment-button,.decrement-button {
     border-color: white;
+  }
+  .home-footer {
+    background-color: #302f2f;
+    color: white;
   }
 }

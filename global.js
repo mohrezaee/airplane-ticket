@@ -31,7 +31,7 @@ if (window.location.href.includes('home/home')) {
 
 function logout() {
     localStorage.removeItem('user')
-    location.reload()
+    window.location.href = "../login/login"
 }
 
 function openNav() {

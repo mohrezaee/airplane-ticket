@@ -8,7 +8,7 @@
     <link href="../index.css" rel="stylesheet" />
     <link href="purchase.css" rel="stylesheet" />
     <link rel="icon" href="../favicon.svg">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body dir="rtl" id="root">
@@ -36,12 +36,10 @@
         <a href="#" class="headerLogo">
             <p class="header-logo-title">هواپیمایی مهسا</p>
             <picture>
-                <source
-                    srcset="../imgs/logoW.png"
-                    media="(prefers-color-scheme: dark)">
-                    <img src="../imgs/logo.png" height="35px" />
+                <source srcset="../imgs/logoW.png" media="(prefers-color-scheme: dark)">
+                <img src="../imgs/logo.png" height="35px" />
             </picture>
-           
+
         </a>
     </nav>
 
@@ -49,18 +47,17 @@
         <h1 class="title">لیست مسافران</h1>
         <div class="row">
             <div class="flight-details">
-                    <img src="../imgs/logo.png" height="35px" style="display:inline;"/>
-                <div style="height: 100px; width: 30%; display: inline-block;">
-                    <h3 class="text" style="text-align:right; padding-right:30px; font-size:14pt;">
+                <div style="height: 100px; display: inline-block;">
+                    <h3 class="text" style="text-align:right; padding-right:30px; font-size:14px;">
                         پنجشنبه 16:30 | 1395/5/5
                     </h3>
-                    <h2 class="text" style="text-align:right; padding-right:30px; margin-top:-10px; font-size:20pt;">
+                    <h2 class="text" style="text-align:right; padding-right:30px; margin-top:-10px; font-size:20px;">
                         همدان - زاهدان
                     </h2>
                 </div>
             </div>
         </div>
-        <table id="passenger-table">
+        <table id="passenger-table" class="passenger-table">
             <tr>
                 <th>
                     مسافر
@@ -73,12 +70,8 @@
                 </th>
             </tr>
         </table>
-        <button class="edit-button">ویرایش</button>
     </div>
-    <div>
-        <button class="continue-button">ادامه</button>
-    </div>
-
+    <button class="continue-button" onclick="buyTicket()">ادامه</button>
     <script src="purchase.js"></script>
     <script src="../global.js"></script>
 </body>
